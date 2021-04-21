@@ -1,2 +1,13 @@
-<h1>Bonjour tout le monde </h1>
-<h3> ceci est la page de produits</h3>
+{% comment %} <h1> {{products|lower}}  </h1>
+<h1> {{products|upper}}  </h1>
+<h1> {{products|length}}  </h1> {% endcomment %}
+<ul>
+{% for p in products %}
+
+<li>{{p}}</li>
+
+{% endfor %}
+
+
+
+</ul>
