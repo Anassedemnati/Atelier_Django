@@ -1,13 +1,15 @@
-{% comment %} <h1> {{products|lower}}  </h1>
-<h1> {{products|upper}}  </h1>
-<h1> {{products|length}}  </h1> {% endcomment %}
-<ul>
-{% for p in products %}
-
-<li>{{p}}</li>
-
-{% endfor %}
-
+{% extends 'base.html' %}
+{% block title %} List produits{% endblock %}
+{% block content %}
+<h1>products</h1>
+    <ul>
+    {% for product in products %}
+    <li>{{ product }}</li>
+    {% endfor %}
 
 
-</ul>
+
+    </ul>
+
+
+{% endblock %}
