@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block title%} les produits{%endblock%}
+{% block content%} 
+
+
+
+<div class="container">
+<a href="{% url 'productcreate'  %}" class="btn btn-link">Nouveau produit</a>
+<div class="row">
+    <div class="co-12">
+        <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Description</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Quantite</th>
+      <th scope="col">Image</th>
+      <th scope="col">Categorie</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for product in products %}{% endfor %}
+    <tr class="table-active">
+    <th scope="row">{{product.id}} </th>
+    <td >{{product.name}} </td>
+    <td >{{product.name}} </td>
+    <td >{{product.name}} </td>
+    <td >{{product.name}} </td>
+    <td >{{product.name}} </td>
+
+      
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+{%endblock%}
