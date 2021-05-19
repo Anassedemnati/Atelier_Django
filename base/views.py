@@ -26,7 +26,7 @@ class ProductView(View):
         form=ProductForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-        return redirect("productlist")
+        return redirect("productslist")
 class CategoryView(View):
     def get(self,request):
         form=CategoryForm()
@@ -35,7 +35,7 @@ class CategoryView(View):
         form=CategoryForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-        return redirect("categorylist")
+        return redirect("Categorylist")
 
 
 

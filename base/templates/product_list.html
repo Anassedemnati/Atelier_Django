@@ -21,27 +21,25 @@
     </tr>
   </thead>
   <tbody>
-  {% for product in products %}{% endfor %}
+  {% for product in products %}
     <tr class="table-active">
     <th scope="row">{{product.id}} </th>
     <td >{{product.name}} </td>
-    <td >{{product.name}} </td>
-    <td >{{product.name}} </td>
-    <td >{{product.name}} </td>
-    <td >{{product.name}} </td>
+    <td >{{product.description}} </td>
+    <td >{{product.brand}} </td>
+    <td >{{product.price}} </td>
+    <td >{{product.countInStock}} </td>
+    <td class="w-25"><img src="{{product.image.url}}" class="img-fluid img-thumbnail" > </td>
+    <td>{{product.category.name}}</td>
+    
 
       
     </tr>
+    {% endfor %}
   </tbody>
 </table>
     </div>
 </div>
 </div>
-
-
-
-
-
-
 
 {%endblock%}
